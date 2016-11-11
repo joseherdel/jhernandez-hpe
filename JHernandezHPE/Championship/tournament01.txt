@@ -1,1 +1,10 @@
-Barrabasada
+[
+	[
+		[ ["Armando","P"],["Dave","S"] ],
+		[ ["Richard","R"],["Michael","S"] ]
+	],
+	[
+		[ ["Allen","S"],["Omer","P"] ],
+		[ ["Joe","R"],["Bob","P"] ]	
+	]
+]
