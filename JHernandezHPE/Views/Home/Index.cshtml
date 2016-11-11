@@ -1,0 +1,89 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Apps GD - Costa Rica</h1>
+    <p class="lead">
+        In a game of rock-paper-scissors, each player chooses to play Rock (R), Paper (P), or Scissors (S). <br />
+        The rules are: Rock beats Scissors, Scissors beats Paper, but Paper beats Rock.
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h4>Upload Tournament File</h4>
+        @using (Html.BeginForm("Upload",
+                                                "Upload",
+                                                FormMethod.Post,
+                                                new { enctype = "multipart/form-data" }))
+        {
+            <input type="submit" class="btn btn-primary btn-lg" value="Upload" /><br><br>
+            <label for="file">Select File:</label>
+            <input type="file" name="file" id="file" data-buttonText="Browse" />
+            <br><br>
+        }
+
+    </div>
+    <div class="col-md-4">
+        <div class="row">
+            <div class="col-md-6">
+
+                <h4>Start Tournament:</h4>
+                @using (Html.BeginForm("NewFromPage",
+                "Championship",
+                FormMethod.Post,
+                new { enctype = "multipart/form-data" }))
+                {
+                    <input type="submit" class="btn btn-primary btn-lg" value="Fight!!!" />
+                    <br><br>
+                }
+
+            </div>
+            <div class="col-md-6">
+
+                <h4>&nbsp;</h4>
+                @using (Html.BeginForm("Reset",
+                "Championship",
+                FormMethod.Post,
+                new { enctype = "multipart/form-data" }))
+                {
+                    <input type="submit" class="btn btn-danger btn-xs" value="Reset" />
+                    <br><br>
+                }
+
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    @if (TempData["errorMessage"] != null)
+                    {
+                        <div class="alert alert-dismissible alert-danger">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            @TempData["errorMessage"].ToString()
+                        </div>
+                    }
+                    @if (TempData["successMessage"] != null)
+                    {
+                        <div class="alert alert-dismissible alert-success">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            @TempData["successMessage"].ToString()
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <h4>Hall of Fame:</h4>
+        @using (Html.BeginForm("Index",
+                                            "Players",
+                                            FormMethod.Get,
+                                            new { enctype = "multipart/form-data" }))
+        {
+
+            <input type="submit" class="btn btn-primary btn-lg" value="Top 10" />
+            <br><br>
+        }
+    </div>
+</div>
