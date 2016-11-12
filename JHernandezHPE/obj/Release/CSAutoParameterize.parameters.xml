@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="Models)-Web.config Connection String" description="Models) Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=Models)-20161109095640; Integrated Security=True; MultipleActiveResultSets=True; AttachDbFilename=|DataDirectory|Models)-20161109095640.mdf" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\dev\\JHernandezHPE\\JHernandezHPE\\JHernandezHPE\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Models)']/@connectionString" />
+  </parameter>
+  <parameter name="JHernandezHPEContext-Web.config Connection String" description="JHernandezHPEContext Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=JHernandezHPEContext-20161109100242; Integrated Security=True; MultipleActiveResultSets=True; AttachDbFilename=|DataDirectory|JHernandezHPEContext-20161109100242.mdf" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\dev\\JHernandezHPE\\JHernandezHPE\\JHernandezHPE\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='JHernandezHPEContext']/@connectionString" />
+  </parameter>
+  <parameter name="JHernandezHPEContext_DatabasePublish-Web.config Connection String" description="JHernandezHPEContext_DatabasePublish Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="JHernandezHPEContext_DatabasePublish.ConnetionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\dev\\JHernandezHPE\\JHernandezHPE\\JHernandezHPE\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='JHernandezHPEContext_DatabasePublish']/@connectionString" />
+  </parameter>
+</parameters>
